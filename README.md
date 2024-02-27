@@ -1,3 +1,4 @@
+![Itgam Banner](md/img/recorta itgam.png)
 
 # Shipping cart🛒 Project
 
