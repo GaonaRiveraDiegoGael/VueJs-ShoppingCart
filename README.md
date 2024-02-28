@@ -1,4 +1,4 @@
-![Itgam Banner](md/img/recorta itgam.png)
+![Itgam Banner](https://github.com/GaonaRiveraDiegoGael/VueJs-ShoppingCart/blob/main/md/img/ITGAM%20BaNNER%20rec.jpg?raw=true)
 
 # Shipping cart🛒 Project
 
