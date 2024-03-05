@@ -20,7 +20,7 @@ const items = ref([
 <template>
   <h1> <i :class="shoppingIcon">local_mall</i> {{ header }}</h1>
   <ul>
-    <li v-for="({id, label}, i) in items" v-bind:key="id">⭐ {{ label }}</li>
+    <li v-for="{id, label} in items" v-bind:key="id">🎈 {{ label }}</li>
   </ul>
 </template>
 
