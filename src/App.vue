@@ -21,9 +21,13 @@ const newItemHighPriority = ref('false')
 
 <template>
   <h1> <i :class="shoppingIcon">local_mall</i> {{ header }}</h1>
+  <div class="add-item form"></div>
   <input v-model="newItem" type="text" placeholder="Agregar Articulo">
-<label><input type="checkbox" v-model="newItemHighPriority">Alta Prioridad</label>
-  {{ newItemHighPriority ? '🔥' : '🧊' }}
+<label><input type="checkbox" v-model="newItemHighPriority"
+ >Alta Prioridad</label>
+
+<button class="btn btn-primary" v-on:click="items.push({ id: items.length, label: newItem})">
+ Agregar Articulo</button>
   <ul>
     <li v-for="{id, label} in items" v-bind:key="id">🎈 {{ label }}</li>
   </ul>
