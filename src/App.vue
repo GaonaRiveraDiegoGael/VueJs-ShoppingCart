@@ -1,7 +1,7 @@
 <script setup>
 // Importando funcion
 // para crear referencias reactivas
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 // Creando una referencia reactiva
 // de tipo string
 const header = ref('App lista de compras');
@@ -19,6 +19,10 @@ const togglePurchased = (item) => {
   item.purchased = !item.purchased
 };
 const newItem =ref('');
+// Creando propiedad computada
+const characterCount = computed(()=>{
+  return newItem.value.length;
+});
 const newItemHighPriority = ref(false)
 // Metodos
 const saveItems = () => {
@@ -71,6 +75,9 @@ const editing = ref(false);
     <button class="btn btn-primary">
       Agregar Articulo
     </button>
+    <p class="counter">
+      {{ characterCount }} / 200
+    </p>
   </form>
   <ul>
     <li 
@@ -78,7 +85,7 @@ const editing = ref(false);
     @click="togglePurchased(items[index])"
     :class="{priority: highPriority, strickeout:purchased}"
     v-bind:key="id"> 
-    {{ label }}</li>
+    🍔{{ label }}</li>
   </ul> 
   <!-- <ul>
     <li 
